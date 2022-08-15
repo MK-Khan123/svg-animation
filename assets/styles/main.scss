@@ -292,15 +292,19 @@ nav {
 
       #blue-ellipse {
         position: absolute;
-        top: 5.2em;
-        left: 10em;
+        max-width: 40%;
+        max-height: 70%;
+        top: 13.32%;
+        left: 12.61%;
         transform: rotate(-5deg);
       }
 
       #gray-ellipse {
         position: absolute;
-        top: 12em;
-        left: -8em;
+        max-width: 40%;
+        max-height: 70%;
+        top: 30.74%;
+        left: -10.09%;
       }
 
       .gray-ring {
@@ -311,22 +315,29 @@ nav {
 
       #panel-three-gray-ellipse {
         position: absolute;
-        right: -45em;
+        max-width: 40%;
+        max-height: 70%;
+        top: 0;
+        right: -56.75%;
         transform: rotate(-45deg);
       }
 
       #hidden-gray-ellipse {
         position: absolute;
-        top: 40em;
-        left: -30em;
+        max-width: 70%;
+        max-height: 70%;
+        top: 102.45%;
+        left: -37.84%;
         transform: rotate(-80deg);
       }
 
       #red-ellipse {
         z-index: 1;
         position: absolute;
-        top: -15.5em;
-        right: -10em;
+        max-width: 70%;
+        // max-height: 90%;
+        top: -39.7%;
+        right: -12.61%;
         transform: rotate(10deg);
       }
     }

@@ -261,7 +261,7 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#blue-ellipse",
             {
-                x: "65rem",
+                x: '639px',                
                 y: "90rem",
                 rotation: "135deg",
                 duration: 1,
@@ -1185,14 +1185,14 @@ animationStep2.addEventListener("animationend", () => {
 
 let clearScroll;
 //auto scroll after name animation is finished
-const autoScroll = (time) => {
-    clearScroll = setTimeout(function () {
-        const panelOneCooard = panelOne.getBoundingClientRect();
-        window.scrollTo(panelOneCooard.left, 400);
-    }, time);
-};
+// const autoScroll = (time) => {
+//     clearScroll = setTimeout(function () {
+//         const panelOneCooard = panelOne.getBoundingClientRect();
+//         window.scrollTo(panelOneCooard.left, 400);
+//     }, time);
+// };
 
-autoScroll(3000);
+// autoScroll(3000);
 
 // when we are at the top of the page, auto scroll to the panel one
 window.addEventListener("scroll", () => {
