@@ -250,46 +250,38 @@ nav ul .verson-img:hover {
 }
 #main-section div #ellipse-group #blue-ellipse {
   position: absolute;
-  max-width: 40%;
-  max-height: 70%;
-  top: 13.32%;
-  left: 12.61%;
+  max-width: 40vw;
+  max-height: 70vh;
+  top: 13.32vh;
+  left: 12.61vw;
   transform: rotate(-5deg);
 }
 #main-section div #ellipse-group #gray-ellipse {
   position: absolute;
-  max-width: 40%;
-  max-height: 70%;
-  top: 30.74%;
-  left: -10.09%;
+  max-width: 40vw;
+  max-height: 81vh;
+  top: 30.74vh;
+  left: -10.09vw;
 }
 #main-section div #ellipse-group .gray-ring {
   position: absolute;
   top: 12em;
   left: 0em;
 }
-#main-section div #ellipse-group #panel-three-gray-ellipse {
-  position: absolute;
-  max-width: 40%;
-  max-height: 70%;
-  top: 0;
-  right: -56.75%;
-  transform: rotate(-45deg);
-}
 #main-section div #ellipse-group #hidden-gray-ellipse {
   position: absolute;
-  max-width: 70%;
-  max-height: 70%;
-  top: 102.45%;
-  left: -37.84%;
+  max-width: 40vw;
+  max-height: 70vh;
+  top: 102.45vh;
+  left: -37.84vw;
   transform: rotate(-80deg);
 }
 #main-section div #ellipse-group #red-ellipse {
   z-index: 1;
   position: absolute;
-  max-width: 70%;
-  top: -39.7%;
-  right: -12.61%;
+  max-width: 70vw;
+  top: -39.7vh;
+  right: -12.61vw;
   transform: rotate(10deg);
 }
 #main-section div .hide-ring {
@@ -1780,15 +1772,21 @@ nav ul .verson-img:hover {
 }
 #panel-three #panel-three-ellipse {
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -20;
+}
+#panel-three #panel-three-ellipse #panel-three-gray-ellipse {
+  position: absolute;
+  max-width: 40vw;
+  max-height: 70vh;
+  right: -50vw;
 }
 #panel-three #panel-three-ellipse #panel-three-red-ellipse {
   position: absolute;
-  top: -100px;
-  left: -1000px;
-  transform: rotate(345deg);
+  max-width: 70vw;
+  top: -10.67vh;
+  left: -52.08vw;
 }
 
 #panel-four {
@@ -1962,13 +1960,15 @@ nav ul .verson-img:hover {
 }
 #panel-four #panel-four-ellipse {
   position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
 }
 #panel-four #panel-four-ellipse #panel-four-gray-ellipse {
   position: absolute;
+  max-width: 40vw;
+  max-height: 70vh;
   left: 0;
-  z-index: -20;
 }
 
 #panel-five {
@@ -2126,8 +2126,14 @@ nav ul .verson-img:hover {
   outline: 0;
 }
 #panel-five-content #panel-five-body #email-contact-form .send-btn .glass {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwNjc2OCIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iMyUiIHN0b3AtY29sb3I9IiNiYmJiYmIiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iMjglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iIzRiNTA1MSIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iOTclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); /* FF3.6+ */ /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
-  background: linear-gradient(to bottom, rgba(96, 103, 104, 0.3) 0%, rgba(187, 187, 187, 0.3) 3%, rgba(187, 187, 187, 0.3) 27%, rgba(0, 0, 0, 0.3) 28%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.3) 73%, rgba(75, 80, 81, 0.3) 88%, rgba(0, 0, 0, 0.3) 97%, rgba(0, 0, 0, 0.3) 100%); /* W3C */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwNjc2OCIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iMyUiIHN0b3AtY29sb3I9IiNiYmJiYmIiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI3JSIgc3RvcC1jb2xvcj0iI2JiYmJiYiIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iMjglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogICAgPHN0b3Agb2Zmc2V0PSI3MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg4JSIgc3RvcC1jb2xvcj0iIzRiNTA1MSIgc3RvcC1vcGFjaXR5PSIwLjMiLz4KICAgIDxzdG9wIG9mZnNldD0iOTclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMyIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(96, 103, 104, 0.3) 0%, rgba(187, 187, 187, 0.3) 3%, rgba(187, 187, 187, 0.3) 27%, rgba(0, 0, 0, 0.3) 28%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.3) 73%, rgba(75, 80, 81, 0.3) 88%, rgba(0, 0, 0, 0.3) 97%, rgba(0, 0, 0, 0.3) 100%);
+  /* W3C */
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset, 0 2px 6px rgba(0, 0, 0, 0.5), 0 10px rgba(0, 0, 0, 0.05) inset;
 }
 #panel-five-content #panel-five-body #email-contact-form .other-info {
@@ -2184,17 +2190,23 @@ nav ul .verson-img:hover {
   font-size: 20px;
   font-weight: 300;
 }
-#panel-five #panel-five-gray-ellipse {
+#panel-five #panel-five-ellipse {
   position: absolute;
-  top: 0;
-  right: 0;
+  width: 100%;
+  height: 100%;
   z-index: -20;
 }
-#panel-five #panel-five-red-ellipse {
+#panel-five #panel-five-ellipse #panel-five-gray-ellipse {
   position: absolute;
-  top: -720px;
-  left: 185px;
-  z-index: -20;
+  max-width: 40vw;
+  max-height: 70vh;
+  right: -50vw;
+}
+#panel-five #panel-five-ellipse #panel-five-red-ellipse {
+  position: absolute;
+  max-width: 70vw;
+  top: -76.84vh;
+  left: 9.635vw;
   transform: rotate(114deg);
 }
 #panel-five #page-footer {
@@ -2492,5 +2504,10 @@ nav ul .verson-img:hover {
   #panel-one-content-body div:nth-child(3) {
     left: 5.2em;
     top: 1em;
+  }
+}
+@media (max-width: 1366px) {
+  #main-content h1 {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=main.css.map */

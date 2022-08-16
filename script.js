@@ -248,7 +248,7 @@ window.addEventListener("DOMContentLoaded", () => {
     //! smooth scroll animation
     smoothScroll("#smooth-content");
 
-    // panel one starts
+    // PANEL 1 STARTS
     gsap
         .timeline({
             scrollTrigger: {
@@ -261,8 +261,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#blue-ellipse",
             {
-                x: '639px',                
-                y: "90rem",
+                x: '54vw',
+                y: "154vh",
                 rotation: "135deg",
                 duration: 1,
             },
@@ -271,9 +271,9 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#gray-ellipse",
             {
+                x: "-41.67vw",
+                y: "85.38vh",
                 rotation: "180deg",
-                y: "50rem",
-                x: "-50rem",
                 duration: 1,
             },
             0
@@ -281,8 +281,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#hidden-gray-ellipse",
             {
-                x: "40rem",
-                y: "10rem",
+                x: "33.34vw",
+                y: "17.08vh",
                 rotation: -345,
                 duration: 1,
             },
@@ -293,15 +293,7 @@ window.addEventListener("DOMContentLoaded", () => {
             {
                 rotate: "180deg",
                 // x: "10rem",
-                y: "55rem",
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#panel-three-gray-ellipse",
-            {
-                y: "90rem",
+                y: "93.917vh",
                 duration: 1,
             },
             0
@@ -316,9 +308,9 @@ window.addEventListener("DOMContentLoaded", () => {
             0
         )
         .add(polygons_animation(panelOne));
-    //! panel one ends
+    // PANEL 1 ENDS
 
-    //! panel two starts
+    //PANEL 2 STARTS
     gsap
         .timeline({
             scrollTrigger: {
@@ -331,8 +323,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#blue-ellipse",
             {
-                x: "15rem",
-                y: "150.5rem",
+                x: "12.5vw",
+                y: "256.99vh",
                 rotation: "-163deg",
                 duration: 1,
             },
@@ -341,9 +333,9 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#gray-ellipse",
             {
+                x: "4.1667vw",
+                y: "196.3714vh",
                 rotation: "-180deg",
-                x: "5rem",
-                y: "115rem",
                 duration: 1,
             },
             0
@@ -352,8 +344,8 @@ window.addEventListener("DOMContentLoaded", () => {
             "#red-ellipse",
             {
                 rotate: "-180deg",
-                x: "-5.2rem",
-                y: "116rem",
+                x: "-4.3333vw",
+                y: "198.079vh",
                 duration: 1,
             },
             0
@@ -361,7 +353,7 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#hidden-gray-ellipse",
             {
-                rotation: "-5deg",
+                rotation: -5,
                 duration: 1,
             },
             0
@@ -369,9 +361,7 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-three-gray-ellipse",
             {
-                x: "30rem",
-                y: "160rem",
-                rotation: 120,
+                rotation: 270,
                 duration: 1,
             },
             0
@@ -394,7 +384,7 @@ window.addEventListener("DOMContentLoaded", () => {
             0
         )
         .add(polygons_animation(panelTwo, 250));
-    //! panel two ends
+    // PANEL 2 ENDS
 
     //PANEL 3 STARTS
     gsap.timeline({
@@ -408,8 +398,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#blue-ellipse",
             {
-                x: "40rem",
-                y: "210rem",
+                x: "33.33vw",
+                y: "358.59vh",
                 rotation: -10,
                 duration: 1,
             }
@@ -417,8 +407,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#gray-ellipse",
             {
-                x: "-45rem",
-                y: "130rem",
+                x: "-37.5vw",
+                y: "221.9851vh",
                 rotation: "270deg",
                 duration: 1,
             },
@@ -427,8 +417,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-three-gray-ellipse",
             {
-                x: "-57rem",
-                y: "190rem",
+                x: "-45vw",
+                y: "31vh",
                 rotation: -30,
                 duration: 1,
             },
@@ -437,7 +427,7 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-three-red-ellipse",
             {
-                rotation: 440,
+                rotation: 400,
                 duration: 1,
             },
             0
@@ -468,8 +458,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#blue-ellipse",
             {
-                x: "9rem",
-                y: "240rem",
+                x: "5vw",
+                y: "408vh",
                 rotation: -244,
                 duration: 1,
             },
@@ -478,8 +468,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-three-gray-ellipse",
             {
-                x: "50rem",
-                y: "250rem",
+                x: "35vw",
+                y: "80vh",
                 rotation: 360,
                 duration: 1,
             },
@@ -488,8 +478,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-three-red-ellipse",
             {
-                x: '-55rem',
-                y: '-45',
+                x: '-45.83vw',
+                y: -45,
                 rotation: 320,
                 duration: 1,
             },
@@ -498,9 +488,9 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-four-gray-ellipse",
             {
-                rotation: 100,
-                x: "-6rem",
-                y: "40rem",
+                rotation: 95,
+                x: "-2vw",
+                y: "72vh",
                 duration: 1,
             },
             0
@@ -508,7 +498,7 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-five-red-ellipse",
             {
-                x: "-150rem",
+                x: "-125vw",
                 rotation: 100,
                 duration: 1,
             },
@@ -517,9 +507,7 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-five-gray-ellipse",
             {
-                rotation: 90,
-                x: "35rem",
-                y: "-5rem",
+                rotation: 270,
                 duration: 1,
             },
             0
@@ -565,8 +553,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-four-gray-ellipse",
             {
-                x: "-150rem",
-                y: "85rem",
+                x: "-125vw",
+                y: "145.1441vh",
                 rotation: 270,
                 duration: 1,
             },
@@ -575,8 +563,8 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#blue-ellipse",
             {
-                x: "41rem",
-                y: "316rem",
+                x: "34.1667vw",
+                y: "539.5945vh",
                 rotation: 0,
                 duration: 1,
             },
@@ -585,17 +573,21 @@ window.addEventListener("DOMContentLoaded", () => {
         .to(
             "#panel-five-gray-ellipse",
             {
+                x: "-41.5vw",
+                y: "23vh",
                 rotation: -20,
-                x: "15rem",
-                y: "8rem",
                 duration: 1,
+                // rotation: -20,
+                // x: "12.5vw",
+                // y: "13.66vh",
+                // duration: 1,
             },
             0
         )
         .to(
             "#panel-five-red-ellipse",
             {
-                x: "-50rem",
+                x: "-41.67vw",
                 rotation: -270,
                 duration: 1,
             },
