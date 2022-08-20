@@ -133,6 +133,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const panelThree = document.querySelector("#panel-three");
     const panelFour = document.querySelector("#panel-four");
     const panelFive = document.querySelector("#panel-five");
+    const ellipticalCircle = gsap.utils.selector(".someShapes");
+
     //! cursor animation
     let cursor = document.querySelector(".cursor");
     let cursorScale = document.querySelectorAll(".cursor-scale");
@@ -178,21 +180,64 @@ window.addEventListener("DOMContentLoaded", () => {
         end: "max",
         snap: 1 / (panels.length - 1),
         duration: 1,
-    });    
+    });
 
     //! smooth scroll animation
     smoothScroll("#smooth-content");
 
+    gsap.timeline({
+        defaults: {
+            transformOrigin: "center center"
+        },
+        scrollTrigger: {
+            trigger: panelOne, // What element triggers the scroll
+            scrub: true, // Add a small delay of scrolling and animation. `true` is direct
+            start: "top top", // Can be top, center, bottom
+            end: "+=200%", // Can be top, center, bottom
+            markers: true,
+        }
+    })
+        .from(ellipticalCircle(".left"), {
+            opacity: 0,
+            x: -500,
+            rotate: -180,
+        }, "<")
+
+        .from(ellipticalCircle(".blue"), {
+            opacity: 0,
+            x: 500,
+            rotate: 180,
+        }, "<")
+
+        .add(() => { }, "+=1")
+
+        .to(ellipticalCircle(".left"), {
+            opacity: 0,
+            x: -500,
+            rotate: -180,
+        }, "<")
+
+        .to(ellipticalCircle(".blue"), {
+            x: 600,
+            y: 80,
+            rotate: 160,
+        }, "<")
+
+        .from(ellipticalCircle(".right"), {
+            opacity: 0,
+            x: 500,
+            rotate: 180,
+        }, "<");
+
     // PANEL 1 STARTS
-    gsap
-        .timeline({
-            scrollTrigger: {
-                trigger: panelOne,
-                start: "top bottom",
-                end: "+=100%",
-                scrub: true,
-            },
-        })
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: panelOne,
+            start: "top bottom",
+            end: "+=100%",
+            scrub: true,
+        },
+    })
         .to(
             "#blue-ellipse",
             {
@@ -255,26 +300,26 @@ window.addEventListener("DOMContentLoaded", () => {
                 scrub: true
             },
         })
-        .to(
-            "#blue-ellipse",
-            {
-                x: "12.5vw",
-                y: "256.99vh",
-                rotation: "-163deg",
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#gray-ellipse",
-            {
-                x: "4.1667vw",
-                y: "196.3714vh",
-                rotation: "-180deg",
-                duration: 1,
-            },
-            0
-        )
+        // .to(
+        //     "#blue-ellipse",
+        //     {
+        //         x: "12.5vw",
+        //         y: "256.99vh",
+        //         rotation: "-163deg",
+        //         duration: 1,
+        //     },
+        //     0
+        // )
+        // .to(
+        //     "#gray-ellipse",
+        //     {
+        //         x: "4.1667vw",
+        //         y: "196.3714vh",
+        //         rotation: "-180deg",
+        //         duration: 1,
+        //     },
+        //     0
+        // )
         .to(
             "#red-ellipse",
             {
@@ -285,22 +330,14 @@ window.addEventListener("DOMContentLoaded", () => {
             },
             0
         )
-        .to(
-            "#hidden-gray-ellipse",
-            {
-                rotation: -5,
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#panel-three-gray-ellipse",
-            {
-                rotation: 270,
-                duration: 1,
-            },
-            0
-        )
+        // .to(
+        //     "#hidden-gray-ellipse",
+        //     {
+        //         rotation: -5,
+        //         duration: 1,
+        //     },
+        //     0
+        // )        
         .to(
             "#panel-three-red-ellipse",
             {
@@ -329,36 +366,7 @@ window.addEventListener("DOMContentLoaded", () => {
             end: "+=100%",
             scrub: true
         },
-    })
-        .to(
-            "#blue-ellipse",
-            {
-                x: "33.33vw",
-                y: "358.59vh",
-                rotation: -10,
-                duration: 1,
-            }
-        )
-        .to(
-            "#gray-ellipse",
-            {
-                x: "-37.5vw",
-                y: "221.9851vh",
-                rotation: "270deg",
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#panel-three-gray-ellipse",
-            {
-                x: "-45vw",
-                y: "31vh",
-                rotation: -30,
-                duration: 1,
-            },
-            0
-        )
+    })                        
         .to(
             "#panel-three-red-ellipse",
             {
@@ -389,27 +397,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 end: "+=100%",
                 scrub: true,
             },
-        })
-        .to(
-            "#blue-ellipse",
-            {
-                x: "5vw",
-                y: "408vh",
-                rotation: -244,
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#panel-three-gray-ellipse",
-            {
-                x: "35vw",
-                y: "80vh",
-                rotation: 360,
-                duration: 1,
-            },
-            0
-        )
+        })        
         .to(
             "#panel-three-red-ellipse",
             {
@@ -419,30 +407,12 @@ window.addEventListener("DOMContentLoaded", () => {
                 duration: 1,
             },
             0
-        )
-        .to(
-            "#panel-four-gray-ellipse",
-            {
-                rotation: 95,
-                x: "-2vw",
-                y: "72vh",
-                duration: 1,
-            },
-            0
-        )
+        )        
         .to(
             "#panel-five-red-ellipse",
             {
                 x: "-125vw",
                 rotation: 100,
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#panel-five-gray-ellipse",
-            {
-                rotation: 270,
                 duration: 1,
             },
             0
@@ -485,40 +455,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 scrub: true,
             },
         })
-        .to(
-            "#panel-four-gray-ellipse",
-            {
-                x: "-125vw",
-                y: "145.1441vh",
-                rotation: 270,
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#blue-ellipse",
-            {
-                x: "34.1667vw",
-                y: "539.5945vh",
-                rotation: 0,
-                duration: 1,
-            },
-            0
-        )
-        .to(
-            "#panel-five-gray-ellipse",
-            {
-                x: "-41.5vw",
-                y: "23vh",
-                rotation: -20,
-                duration: 1,
-                // rotation: -20,
-                // x: "12.5vw",
-                // y: "13.66vh",
-                // duration: 1,
-            },
-            0
-        )
         .to(
             "#panel-five-red-ellipse",
             {
