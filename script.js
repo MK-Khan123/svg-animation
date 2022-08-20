@@ -171,79 +171,14 @@ window.addEventListener("DOMContentLoaded", () => {
             cursor.classList.remove("grow-small");
         });
     });
-    // cursorHover.forEach((link) => {
-    //     const oldWidth = cursor.style.width;
-    //     const oldHeight = cursor.style.height;
-    //     const oldBg = cursor.style.background;
-    //     const oldLeft = cursor.style.marginLeft;
-    //     const oldTop = cursor.style.marginTop;
-    //     link.addEventListener("mouseover", () => {
-    //         cursor.style.width = "40px";
-    //         cursor.style.height = "40px";
-    //         cursor.style.background = "white";
-    //         document.querySelector("body").style.cursor = "none";
-    //         cursor.style.marginTop = "-15px";
-    //         cursor.style.marginLeft = "-16px";
-    //         cursorInner.style.display = "block";
-    //     })
-    //     link.addEventListener("mouseout", () => {
-    //         document.querySelector("body").style.cursor = "default";
-    //         cursor.style.width = oldWidth;
-    //         cursor.style.height = oldHeight;
-    //         cursor.style.background = oldBg;
-    //         cursor.style.cursor = "pointer";
-    //         cursor.style.marginTop = oldTop;
-    //         cursor.style.marginLeft = oldLeft;
-    //         cursorInner.style.display = "none";
-    //     })
-    // })
-    // panel swap animation
+
     let panels = gsap.utils.toArray(".panel");
     ScrollTrigger.create({
         start: 0,
         end: "max",
         snap: 1 / (panels.length - 1),
         duration: 1,
-    });
-
-    //! name animation
-    // function animateName() {
-    //   var spanText = function spanText(text) {
-    //     var string = text.innerText;
-    //     var spaned = "";
-    //     for (var i = 0; i < string.length; i++) {
-    //       if (string.substring(i, i + 1) === " ")
-    //         spaned += string.substring(i, i + 1);
-    //       else spaned += "<span>" + string.substring(i, i + 1) + "</span>";
-    //     }
-    //     text.innerHTML = spaned;
-    //   };
-
-    //   let headline = document.querySelector(".cursor-scale");
-
-    //   spanText(headline);
-
-    //   let animations = document.querySelectorAll("h1");
-
-    //   animations.forEach((animation) => {
-    //     let letters = animation.querySelectorAll("span");
-    //     letters.forEach((letter, i) => {
-    //       letter.style.animationDelay = i * 0.1 + "s";
-    //     });
-    //   });
-
-    //   let animationStep2 = document.querySelector(
-    //     ".cursor-scale span:last-of-type"
-    //   );
-    //   animationStep2.addEventListener("animationend", () => {
-    //     headline.classList.add("animation--step-2");
-    //     setTimeout(() => {
-    //       headline.classList.remove("animation--step-2");
-    //       headline.classList.add("animation--step-3");
-    //     }, 1000);
-    //   });
-    // }
-    // setInterval(animateName, 2000);
+    });    
 
     //! smooth scroll animation
     smoothScroll("#smooth-content");
