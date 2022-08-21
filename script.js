@@ -185,15 +185,19 @@ window.addEventListener("DOMContentLoaded", () => {
     //! smooth scroll animation
     smoothScroll("#smooth-content");
 
+    //BLUE AND GREY COLORED ELLIPSES ANIMATION
+    //They are kept separate because their position is fixed and starts at the top of the HTML document
+
+    //PANEL 2 Starts
     gsap.timeline({
         defaults: {
             transformOrigin: "center center"
         },
         scrollTrigger: {
-            trigger: panelOne, // What element triggers the scroll
+            trigger: panelTwo, // What element triggers the scroll
             scrub: true, // Add a small delay of scrolling and animation. `true` is direct
-            start: "top top", // Can be top, center, bottom
-            end: "+=200%", // Can be top, center, bottom
+            start: "top center", // Can be top, center, bottom
+            end: "+=100%", // Can be top, center, bottom
             markers: true,
         }
     })
@@ -201,34 +205,134 @@ window.addEventListener("DOMContentLoaded", () => {
             opacity: 0,
             x: -500,
             rotate: -180,
+            duration: 1,
         }, "<")
 
         .from(ellipticalCircle(".blue"), {
             opacity: 0,
             x: 500,
             rotate: 180,
+            duration: 1,
         }, "<")
 
-        .add(() => { }, "+=1")
+        .add(() => { }, "+=1");
+    //PANEL 2 Ends
 
+    //PANEL 3 Starts
+    gsap.timeline({
+        defaults: {
+            transformOrigin: "center center"
+        },
+        scrollTrigger: {
+            trigger: panelThree,
+            scrub: true,
+            start: "top center",
+            end: "+=100%",
+            markers: true,
+        }
+    })
         .to(ellipticalCircle(".left"), {
             opacity: 0,
             x: -500,
             rotate: -180,
+            duration: 1,
         }, "<")
 
         .to(ellipticalCircle(".blue"), {
             x: 600,
             y: 80,
             rotate: 160,
+            duration: 1,
         }, "<")
 
         .from(ellipticalCircle(".right"), {
             opacity: 0,
             x: 500,
             rotate: 180,
-        }, "<");
+            duration: 1,
+        }, "<")
 
+        .add(() => { }, "+=1");
+    //PANEL 3 Ends
+
+    //PANEL 4 Starts
+    gsap.timeline({
+        defaults: {
+            transformOrigin: "center center"
+        },
+        scrollTrigger: {
+            trigger: panelFour,
+            scrub: true,
+            start: "top center",
+            end: "+=100%",
+            markers: true,
+        }
+    })
+        .to(ellipticalCircle(".right"), {
+            opacity: 0,
+            x: 500,
+            rotate: 180,
+            duration: 1,
+        }, "<")
+
+        .to(ellipticalCircle(".blue"), {
+            x: 30,
+            y: -5,
+            rotate: 0,
+            duration: 1,
+        }, "<")
+
+        .fromTo(ellipticalCircle(".left"),
+            { opacity: 0 }, {
+            opacity: 1,
+            x: 30,
+            rotate: 0,
+            duration: 1,
+        }, "<")
+
+        .add(() => { }, "+=1");
+    //PANEL 4 Ends
+
+    //PANEL 5 Starts
+    gsap.timeline({
+        defaults: {
+            transformOrigin: "center center"
+        },
+        scrollTrigger: {
+            trigger: panelFive,
+            scrub: true,
+            start: "top center",
+            end: "+=100%",
+            markers: true,
+        }
+    })
+        .to(ellipticalCircle(".left"), {
+            opacity: 0,
+            x: -500,
+            rotate: -180,
+            duration: 1,
+        }, "<")
+
+        .to(ellipticalCircle(".blue"), {
+            x: 600,
+            y: 80,
+            rotate: 160,
+            duration: 1,
+        }, "<")
+
+        .fromTo(ellipticalCircle(".right"),
+            { opacity: 0 },
+            {
+                opacity: 1,
+                x: 0,
+                rotate: 0,
+                duration: 1,
+            }, "<")
+
+        .add(() => { }, "+=1");
+    //PANEL 5 Ends
+
+    
     // PANEL 1 STARTS
     gsap.timeline({
         scrollTrigger: {
@@ -300,26 +404,16 @@ window.addEventListener("DOMContentLoaded", () => {
                 scrub: true
             },
         })
-        // .to(
-        //     "#blue-ellipse",
-        //     {
-        //         x: "12.5vw",
-        //         y: "256.99vh",
-        //         rotation: "-163deg",
-        //         duration: 1,
-        //     },
-        //     0
-        // )
-        // .to(
-        //     "#gray-ellipse",
-        //     {
-        //         x: "4.1667vw",
-        //         y: "196.3714vh",
-        //         rotation: "-180deg",
-        //         duration: 1,
-        //     },
-        //     0
-        // )
+        .to(
+            "#blue-ellipse",
+            {
+                x: "153vw",
+                y: "256.99vh",
+                rotation: "-163deg",
+                duration: 1,
+            },
+            0
+        )
         .to(
             "#red-ellipse",
             {
@@ -330,14 +424,14 @@ window.addEventListener("DOMContentLoaded", () => {
             },
             0
         )
-        // .to(
-        //     "#hidden-gray-ellipse",
-        //     {
-        //         rotation: -5,
-        //         duration: 1,
-        //     },
-        //     0
-        // )        
+        .to(
+            "#hidden-gray-ellipse",
+            {
+                rotation: -5,
+                duration: 1,
+            },
+            0
+        )
         .to(
             "#panel-three-red-ellipse",
             {
@@ -366,7 +460,7 @@ window.addEventListener("DOMContentLoaded", () => {
             end: "+=100%",
             scrub: true
         },
-    })                        
+    })
         .to(
             "#panel-three-red-ellipse",
             {
@@ -397,7 +491,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 end: "+=100%",
                 scrub: true,
             },
-        })        
+        })
         .to(
             "#panel-three-red-ellipse",
             {
@@ -407,7 +501,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 duration: 1,
             },
             0
-        )        
+        )
         .to(
             "#panel-five-red-ellipse",
             {
