@@ -197,8 +197,7 @@ window.addEventListener("DOMContentLoaded", () => {
             trigger: panelTwo, // What element triggers the scroll
             scrub: true, // Add a small delay of scrolling and animation. `true` is direct
             start: "top center", // Can be top, center, bottom
-            end: "+=100%", // Can be top, center, bottom
-            markers: true,
+            end: "+=100%", // Can be top, center, bottom            
         }
     })
         .from(ellipticalCircle(".left"), {
@@ -227,8 +226,7 @@ window.addEventListener("DOMContentLoaded", () => {
             trigger: panelThree,
             scrub: true,
             start: "top center",
-            end: "+=100%",
-            markers: true,
+            end: "+=100%",            
         }
     })
         .to(ellipticalCircle(".left"), {
@@ -264,8 +262,7 @@ window.addEventListener("DOMContentLoaded", () => {
             trigger: panelFour,
             scrub: true,
             start: "top center",
-            end: "+=100%",
-            markers: true,
+            end: "+=100%",            
         }
     })
         .to(ellipticalCircle(".right"), {
@@ -302,8 +299,7 @@ window.addEventListener("DOMContentLoaded", () => {
             trigger: panelFive,
             scrub: true,
             start: "top center",
-            end: "+=100%",
-            markers: true,
+            end: "+=100%",            
         }
     })
         .to(ellipticalCircle(".left"), {
